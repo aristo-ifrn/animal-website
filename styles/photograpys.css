@@ -1,0 +1,47 @@
+.app-wrapper {
+  overflow-y: auto;
+}
+
+#images {
+  margin-top: var(--space-20);
+}
+
+#images .wrapper {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fit, minmax(var(--space-64), 1fr));
+  grid-auto-rows: var(--space-80);
+  grid-auto-flow: dense;
+}
+
+#images .wrapper .figure {
+  width: 100%;
+  height: 100%;
+  transition: 0.2s;
+  filter: grayscale(1) brightness(0.8);
+}
+
+#images .wrapper .figure:hover {
+  filter: none;
+}
+
+#images .wrapper .wide {
+  grid-column: span 2;
+}
+
+#images .wrapper .tall {
+  grid-row: span 2;
+}
+
+#images .wrapper .big {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+#images .wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radii-sm);
+  object-fit: cover;
+  object-position: center;
+}

@@ -12,7 +12,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/photograpys.css" />
+    <link rel="stylesheet" href="./styles/developers.css" />
+    <script defer src="./scripts/developers.js"></script>
   </head>
   <body>
     <header id="header">
@@ -32,46 +33,39 @@
       </div>
     </header>
     <div class="app-wrapper">
-      <section id="images">
+      <section id="participants">
         <div class="wrapper">
-          <div class="figure tall">
-            <img src="./assets/images/coloreds/zebra01.jpg" alt="">
+          <h2>The <b>zebra</b> participants</h2>
+          <p>
+            Pessoas que contribuíram direta ou indiretamente para construção
+            deste incrível website!
+            <br />
+            <br />
+            Thank you! 🤍
+          </p>
+        </div>
+      </section>
+      <section id="developers">
+        <div class="wrapper">
+          <div class="card cardOne">
+            <div class="cardWrapper">
+              <img src="https://github.com/aristofany-herderson.png" alt="" />
+              <h2>Aristofany Herderson</h2>
+              <span>Desenvolvedor</span>
+              <p>
+                Front-end developer & IFRN estudent.
+              </p>
+            </div>
           </div>
-          <div class="figure wide">
-            <img src="./assets/images/coloreds/zebra02.jpg" alt="">
-          </div>
-          <div class="figure big">
-            <img src="./assets/images/coloreds/zebra03.jpg" alt="">
-          </div>
-          <div class="figure">
-            <img src="./assets/images/coloreds/zebra04.jpg" alt="">
-          </div>
-          <div class="figure">
-            <img src="./assets/images/coloreds/zebra05.jpg" alt="">
-          </div>
-          <div class="figure">
-            <img src="./assets/images/coloreds/zebra06.jpg" alt="">
-          </div>
-          <div class="figure wide">
-            <img src="./assets/images/coloreds/zebra07.jpg" alt="">
-          </div>
-          <div class="figure">
-            <img src="./assets/images/coloreds/zebra08.jpg" alt="">
-          </div>
-          <div class="figure">
-            <img src="./assets/images/coloreds/zebra09.jpg" alt="">
-          </div>
-          <div class="figure tall">
-            <img src="./assets/images/coloreds/zebra10.jpg" alt="">
-          </div>
-          <div class="figure wide">
-            <img src="./assets/images/coloreds/zebra11.jpg" alt="">
-          </div>
-          <div class="figure big">
-            <img src="./assets/images/coloreds/zebra13.jpg" alt="">
-          </div>
-          <div class="figure">
-            <img src="./assets/images/coloreds/zebra12.jpg" alt="">
+          <div class="card cardTwo">
+            <div class="cardWrapper">
+              <img src="https://github.com/MimMarcelo.png" alt="" />
+              <h2>Marcelo Júnior</h2>
+              <span>Professor</span>
+              <p>
+                Professor de Sistemas de Informação do IFRN, campus Santa Cruz
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -100,5 +94,18 @@
         </div>
       </div>
     </footer>
+    <section id="popup" data-state="closed">
+      <div class="background"></div>
+      <div class="wrapper">
+        <button><img src="./assets/icons/close.svg" alt="" /></button>
+        <iframe
+          src="https://www.youtube.com/embed/lDzHrz0YbBc"
+          title="DOCUMENTÁRIO -  A VIDA DA ZEBRA"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
   </body>
 </html>

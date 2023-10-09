@@ -1,0 +1,132 @@
+.app-wrapper {
+  overflow-y: auto;
+}
+
+#participants {
+  margin-top: var(--space-20);
+}
+
+#participants h2 {
+  max-width: 40%;
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-8xl);
+  text-transform: uppercase;
+}
+
+#participants p {
+  max-width: 30%;
+}
+
+#participants h2 b {
+  color: var(--colors-animal-mid);
+}
+
+#developers {
+  margin: var(--space-20) 0;
+}
+
+#developers .wrapper {
+  justify-content: center;
+}
+
+.card {
+  margin: 0 var(--space-12);
+  transform-style: preserve-3d;
+  transform: perspective(100rem);
+  cursor: pointer;
+}
+.cardWrapper {
+  --rX: 0;
+  --rY: 0;
+  --bX: 50%;
+  --bY: 80%;
+
+  width: var(--space-64);
+  aspect-ratio: 6 / 8;
+  border-radius: var(--radii-md);
+  padding: var(--space-8);
+
+  transform: rotate(calc(var(--rX) * 0.1deg)) rotateX(calc(var(--rX) * 1deg))
+    rotateY(calc(var(--rY) * 1deg));
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/images/zebra01.jpg");
+  background-position: var(--bX) var(--bY);
+  background-size: 28rem auto;
+  box-shadow:  -0 0 60px 1px rgba(200,200,200,0.05);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.6s 1s;
+}
+.cardWrapper:before,
+.cardWrapper:after {
+  content: "";
+  position: absolute;
+
+  width: var(--space-4);
+  height: var(--space-4);
+  border: var(--border-width-thin) solid var(--colors-white);
+
+  z-index: 2;
+  opacity: 0.2;
+  transition: 0.3s;
+}
+.cardWrapper:before {
+  top: var(--space-2);
+  right: var(--space-2);
+  border-bottom-width: 0;
+  border-top-right-radius: var(--radii-sm);
+  border-left-width: 0;
+}
+.cardWrapper:after {
+  bottom: var(--space-2);
+  left: var(--space-2);
+  border-top-width: 0;
+  border-bottom-left-radius: var(--radii-sm);
+  border-right-width: 0;
+}
+.cardWrapperActivated {
+  transition: none;
+}
+
+.card img {
+  width: 50%;
+  padding: var(--space-1);
+  margin-bottom: var(--space-2);
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radii-full);
+  border: var(--border-width-thick) solid var(--colors-white);
+  overflow: hidden;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.card h2,
+.card p {
+  text-align: center;
+}
+
+.card span {
+  background: var(--colors-animal-mid);
+  color: var(--colors-gray-100);
+  padding: var(--space-px) var(--space-2);
+  margin: var(--space-3) 0;
+  font-size: var(--font-size-xxs);
+
+  border-radius: var(--radii-sm);
+}
+
+.card p {
+  margin-top: auto;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-tall);
+}
+
+.card:hover .cardWrapper:before,
+.card:hover .cardWrapper:after {
+  width: calc(100% - var(--space-4));
+  height: calc(100% - var(--space-4));
+  border-radius: var(--radii-sm);
+}

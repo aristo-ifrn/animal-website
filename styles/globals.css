@@ -226,6 +226,7 @@ header#header #search img {
 }
 
 footer#footer {
+  pointer-events: none;
   position: relative;
   z-index: var(--z-index-overlay);
   transform: translateY(-100%);

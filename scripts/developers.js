@@ -1,14 +1,14 @@
 const createParallaxTitlEffect = ({ element, effect }) => {
   const container = element.querySelector(".cardWrapper");
   const size = [container.offsetWidth, container.offsetHeight];
-  const [ width, height ] = size;
+  const [width, height] = size;
 
   init({ element, container, effect, width, height });
 };
 
 const handleMouseMove = ({ event, container, effect, width, height }) => {
   const { offsetX, offsetY } = event;
-  console.log(offsetX)
+  console.log(offsetX);
   let X;
   let Y;
 
@@ -59,4 +59,9 @@ createParallaxTitlEffect({
 createParallaxTitlEffect({
   effect: "reverse",
   element: document.querySelector(".cardTwo"),
+});
+
+createParallaxTitlEffect({
+  effect: "reverse",
+  element: document.querySelector(".cardThree"),
 });
